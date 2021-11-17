@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-button (click)="onGetClick()">Get quality control</ion-button>
+  </div>
+  <div>
+    <ion-button (click)="onViewClick()" [disabled]="!products"
+      >View quality control</ion-button
+    >
+  </div>
+  <div>
+    <ion-button
+      (click)="onPushClick()"
+      [disabled]="!products || products.length != answers.size"
+      >Push quality control</ion-button
+    >
+  </div>
+  <div>
+    <ion-button (click)="onLogoutClick()">Logout</ion-button>
+  </div>
+</ion-content>

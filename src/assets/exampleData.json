@@ -1,0 +1,16 @@
+{
+    "products":[
+        {
+            "name":"Honda",
+            "questions":["How many doors?","how many wheels"]
+        },
+        {
+            "name":"Mercedes",
+            "questions":["How many cylinders?"]
+        },
+        {
+            "name":"BMW",
+            "questions":["How many doors?","how many engines","How many cylinders?"]
+        }
+    ]
+}

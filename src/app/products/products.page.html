@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>products</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let product of products">
+    <ion-button (click)="onProductClick(product)">{{product.name}}</ion-button>
+  </div>
+  <ion-button (click)="onBackClick()">Back</ion-button>
+</ion-content>
