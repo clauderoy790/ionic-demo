@@ -7,7 +7,7 @@
 <ion-content>
   <div *ngFor="let question of product.questions;index as i">
     <ion-label>{{question}}</ion-label>
-    <ion-input type="text" [(ngModel)]="answers[i]"></ion-input>
+    <ion-input type="text" [(ngModel)]="answers[product.name][i]"></ion-input>
   </div>
   <div>
     <ion-button (click)="onBackClick()">Back</ion-button>

@@ -9,19 +9,19 @@ import { Product } from "../models/product";
 })
 export class QuestionsPage implements OnInit {
   product: Product;
-  answers: string[];
+  answers: Map<string, string[]>;
 
   constructor(private router: Router) {
     const state = this.router.getCurrentNavigation()?.extras?.state;
     if (state) {
       this.product = state.product as Product;
-      if (state.answers) {
-        this.answers = state.answers as string[];
-      } else {
-        this.answers = [];
+      this.answers = state.answers as Map<string, string[]>;
+      if (!this.answers[this.product.name]) {
+        const arr: string[] = [];
         for (let i = 0; i < this.product.questions.length; i++) {
-          this.answers.push("");
+          arr.push("");
         }
+        this.answers[this.product.name] = arr;
       }
     }
   }

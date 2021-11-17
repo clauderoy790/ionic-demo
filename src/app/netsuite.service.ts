@@ -19,8 +19,7 @@ export class NetsuiteService {
     return this.products;
   }
 
-  public pushData(product: Product, answers: string[]) {
-    console.log("push data for product: ", product.name);
-    console.log(answers);
+  public pushData(answers: Map<string,string[]>) {
+    console.log('push answers: ', answers);
   }
 }

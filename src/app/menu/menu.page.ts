@@ -19,8 +19,6 @@ export class MenuPage implements OnInit {
       this.answers =
         (state.answers as Map<string, string[]>) ?? new Map<string, string[]>();
     }
-    console.log("answers:");
-    console.log(this.answers);
   }
 
   ngOnInit() {}
@@ -33,14 +31,13 @@ export class MenuPage implements OnInit {
     this.router.navigate(["/products"], {
       state: {
         products: this.products,
-        answers: this.answers
+        answers: this.answers,
       },
     });
   }
 
   onPushClick() {
-    // todo
-    this.netsuite.pushData(undefined, undefined);
+    this.netsuite.pushData(this.answers);
   }
 
   onLogoutClick() {
